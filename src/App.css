@@ -1,0 +1,155 @@
+
+.heading{
+  color: white;
+  padding: 15px;
+  width: 65%;
+  display: block;
+  margin: auto;
+  margin-top: 0px;
+  align-items: center;
+  background-color: #0e185f;
+  border-radius: 5px;
+
+}
+
+div.tittle {
+ margin-bottom: 10px;
+ display: flex;
+ justify-content: center;
+
+}
+
+
+
+.form-seach-city {
+  font-size: 18px;
+  display: flex;
+  gap: 9px;
+  justify-content: center;
+ 
+ 
+}
+
+.form-seach-city input {
+  padding: 10px;
+  border-radius: 5px;
+  padding: 10px;  
+
+}
+
+.btn-primary {
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #2475f0;
+  color: #F8F9FA;
+  border-radius: 5px;
+  transition: all ease-in-out 150ms;
+}
+
+.btn-primary:hover {
+  background-color: #0B5ED7;
+  cursor: pointer;
+}
+
+
+.main-weather {
+  background-color: rgb(210, 218, 226, 0.8);
+  padding: 15px;
+  width: 65%;
+  display: block;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  align-items: center;
+  border-radius: 5px;
+}
+
+
+
+div.box-city-name{
+  display: flex;
+  flex-grow: 1 ;
+  justify-content: center;
+  font-size: 50px;
+  transition: all ease-in-out;
+  font-weight: 700;
+  color: #0e185f;
+}
+
+
+.city-name:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.box-date {
+  font-size: 14px;
+  text-align: right;
+}
+
+.box-actual-weather {
+  display: flex;
+  flex-direction: row;
+     
+}
+
+.celsius-temperature {
+  font-size: 18px;
+  color: black;
+  margin-top: 20px;
+  text-align: left;
+  vertical-align: text-top;
+}
+
+.main-icon {
+  font-size: 60px;
+  text-align: left;
+  display: flex;
+  flex-direction: row;  
+  align-items: center;
+}
+
+.box-weather-details{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+}
+
+
+#description{
+  font-size: 30px;
+}
+
+#description::first-letter,
+#forecast-description::first-letter {
+  text-transform: capitalize;
+  
+}
+
+.info{
+  font-weight: bold;
+}
+
+.forecast {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 14px;  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.data-day {
+  text-decoration: underline;
+  font-weight: bold;
+}
+.min {
+  color: grey;
+}
+
+.botton {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+}
