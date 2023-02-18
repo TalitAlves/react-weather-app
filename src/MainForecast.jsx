@@ -1,7 +1,9 @@
 import React from 'react';
+import calendar from "./img/calendar.svg"
 
 export default function mainForecast (){
     return(
+        <div className="container-forecast">
         <div className="main-weather box-city-forecast">
        
         <div className="box-city-name">
@@ -22,6 +24,7 @@ export default function mainForecast (){
              src="http://openweathermap.org/img/wn/10d@2x.png"
              alt=""
            />
+           <div/>
            <div>
            <span id="temperature"> 28</span>
            <span className="celsius-temperature">ºC</span>
@@ -37,5 +40,114 @@ export default function mainForecast (){
        </div>
      </div>
      </div>
+
+
+        <div className=" main-weather five-days-forecast">
+
+        <div className="image">
+                <img src={calendar} alt="calendar" />
+            </div>
+
+
+
+        <div class="forecast" id="forecast">
+            <div className="day">
+           <div class="day" id="weekDay">Tus</div>
+            <span id="temperature5Days">15</span><span>ºC</span>
+            <div>
+              <img
+                id="icon5Days"
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                alt=""
+                width="60px"
+              />
+            </div>
+            <div id="forecast-description">Sunny</div>
+            <div>
+              <span class="max" id="max">15</span> <span>º </span>
+              <span class="min" id="min">12</span> <span>º</span>
+            </div>
+            </div>
+            <div className="day">
+            <div class="day" id="weekDay">Tus</div>
+            <span id="temperature5Days">15</span><span>ºC</span>
+            <div>
+              <img
+                id="icon5Days"
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                alt=""
+                width="60px"
+              />
+            </div>
+            <div id="forecast-description">Sunny</div>
+            <div>
+              <span class="max" id="max">15</span> <span>º </span>
+              <span class="min" id="min">12</span> <span>º</span>
+            </div>
+            </div>
+
+
+           <div className="day">
+            <div class="day" id="weekDay">Tus</div>
+            <span id="temperature5Days">15</span><span>ºC</span>
+            <div>
+              <img
+                id="icon5Days"
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                alt=""
+                width="60px"
+              />
+            </div>
+            <div id="forecast-description">Sunny</div>
+            <div>
+              <span class="max" id="max">15</span> <span>º </span>
+              <span class="min" id="min">12</span> <span>º</span>
+            </div>
+            </div>
+
+
+            <div className="day">
+            <div class="day" id="weekDay">Tus</div>
+            <span id="temperature5Days">15</span><span>ºC</span>
+            <div>
+              <img
+                id="icon5Days"
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                alt=""
+                width="60px"
+              />
+            </div>
+            <div id="forecast-description">Sunny</div>
+            <div>
+              <span class="max" id="max">15</span> <span>º </span>
+              <span class="min" id="min">12</span> <span>º</span>
+            </div>
+            </div>
+
+
+            <div className="day">
+            <div class="day" id="weekDay">Tus</div>
+            <span id="temperature5Days">15</span><span>ºC</span>
+            <div>
+              <img
+                id="icon5Days"
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                alt=""
+                width="60px"
+              />
+            </div>
+            <div id="forecast-description">Sunny</div>
+            <div>
+              <span class="max" id="max">15</span> <span>º </span>
+              <span class="min" id="min">12</span> <span>º</span>
+            </div>
+            </div> 
+      </div>
+      </div>
+      </div>
+
+
+
+
     )
 }

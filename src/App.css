@@ -1,12 +1,25 @@
 
+.container{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ 
+
+}
+
+.container-forecast{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+
+}
+
 .heading{
   color: white;
-  padding: 15px;
-  width: 65%;
-  display: block;
-  margin: auto;
-  margin-top: 0px;
-  align-items: center;
+  padding: 10px;
+  width: 50%;
   background-color: #0e185f;
   border-radius: 5px;
 
@@ -16,6 +29,7 @@ div.tittle {
  margin-bottom: 10px;
  display: flex;
  justify-content: center;
+ font-size: 25px;
 
 }
 
@@ -31,14 +45,15 @@ div.tittle {
 }
 
 .form-seach-city input {
-  padding: 10px;
+  padding: 5px;
   border-radius: 5px;
-  padding: 10px;  
+  padding: 10px; 
+  
 
 }
 
 .btn-primary {
-  font-size: 15px;
+  font-size: 12px;
   padding: 10px;
   border-radius: 5px;
   background-color: #2475f0;
@@ -54,15 +69,14 @@ div.tittle {
 
 
 .main-weather {
-  background-color: rgb(210, 218, 226, 0.8);
+  background-color: rgba(255, 255, 255, 0.989);
   padding: 15px;
-  width: 65%;
-  display: block;
-  margin: auto;
-  margin-top: 0px;
-  margin-bottom: 10px;
   align-items: center;
   border-radius: 5px;
+  align-content: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+
 }
 
 
@@ -70,11 +84,11 @@ div.tittle {
 div.box-city-name{
   display: flex;
   flex-grow: 1 ;
-  justify-content: center;
-  font-size: 50px;
+  font-size: 35px;
   transition: all ease-in-out;
   font-weight: 700;
   color: #0e185f;
+  margin-bottom: 10px;
 }
 
 
@@ -84,13 +98,14 @@ div.box-city-name{
 }
 
 .box-date {
-  font-size: 14px;
+  font-size: 12px;
   text-align: right;
+  margin-bottom: 10px;
 }
 
 .box-actual-weather {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
      
 }
 
@@ -102,11 +117,15 @@ div.box-city-name{
   vertical-align: text-top;
 }
 
+#icon{
+  width: 150px;
+  margin: 0;
+}
+
 .main-icon {
-  font-size: 60px;
-  text-align: left;
+  font-size: 50px;
   display: flex;
-  flex-direction: row;  
+  flex-direction: column;  
   align-items: center;
 }
 
@@ -118,8 +137,11 @@ div.box-city-name{
 }
 
 
-#description{
-  font-size: 30px;
+.weather{
+  display: flex;
+  margin-bottom: 15px;
+  font-size: 25px;
+  align-items: center;
 }
 
 #description::first-letter,
@@ -128,8 +150,19 @@ div.box-city-name{
   
 }
 
+
+.image img{
+  width: 371px;
+ }
+
 .info{
   font-weight: bold;
+}
+
+.five-days-forecast{
+  display: flex;
+  flex-direction: column;
+
 }
 
 .forecast {
@@ -139,6 +172,11 @@ div.box-city-name{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
+  flex-grow: 1;
+  gap: 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  
 }
 .data-day {
   text-decoration: underline;

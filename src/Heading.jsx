@@ -3,9 +3,9 @@ import React from "react";
 export default function heading (){
  return(
     
-    <div>
+    <div className="container">
     <div className=" heading tittle">
-    <h1>Weather Around The World</h1>
+    Weather Around The World
     </div>
         
         <form className="heading form-seach-city" id="searching">
