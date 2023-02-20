@@ -2,6 +2,7 @@ import React from 'react';
 import calendar from "./img/calendar.svg"
 import axios from "axios";
 import { useState } from "react";
+import FormattedDate from "./FormattedDate"
 
 export default function MainForecast (){
 const[status, setStatus]= useState(false);
@@ -17,6 +18,7 @@ function handleResponse(response){
         wind: response.data.wind.speed,
         feelsLike: response.data.main.feels_like,
         icon:response.data.weather[0].icon,
+        date: new Date(response.data.dt*1000),
 
     })
     setStatus(true)
@@ -34,10 +36,10 @@ if (status){
         </div>
         
             <div className="box-date">
-            <div className="date" id="actual-date">Sunday - August, 22nd</div>
-            <span>Last update:</span>
-            <span id="hour-infomation"> 11:51</span>
-          </div>
+            <div className="date" id="actual-date">
+                <FormattedDate date={weatherData.date}/>
+                </div>
+                </div>
         
     
        <div className="box-actual-weather">
@@ -74,9 +76,9 @@ if (status){
 
 
 
-        <div class="forecast" id="forecast">
+        <div className="forecast" id="forecast">
             <div className="day">
-           <div class="day" id="weekDay">Tus</div>
+           <div className="day" id="weekDay">Tus</div>
             <span id="temperature5Days">15</span><span>ºC</span>
             <div>
               <img
@@ -88,12 +90,12 @@ if (status){
             </div>
             <div id="forecast-description">Sunny</div>
             <div>
-              <span class="max" id="max">15</span> <span>º </span>
-              <span class="min" id="min">12</span> <span>º</span>
+              <span className="max" id="max">15</span> <span>º </span>
+              <span className="min" id="min">12</span> <span>º</span>
             </div>
             </div>
             <div className="day">
-            <div class="day" id="weekDay">Tus</div>
+            <div className="day" id="weekDay">Tus</div>
             <span id="temperature5Days">15</span><span>ºC</span>
             <div>
               <img
@@ -105,14 +107,14 @@ if (status){
             </div>
             <div id="forecast-description">Sunny</div>
             <div>
-              <span class="max" id="max">15</span> <span>º </span>
-              <span class="min" id="min">12</span> <span>º</span>
+              <span className="max" id="max">15</span> <span>º </span>
+              <span className="min" id="min">12</span> <span>º</span>
             </div>
             </div>
 
 
            <div className="day">
-            <div class="day" id="weekDay">Tus</div>
+            <div className="day" id="weekDay">Tus</div>
             <span id="temperature5Days">15</span><span>ºC</span>
             <div>
               <img
@@ -124,14 +126,14 @@ if (status){
             </div>
             <div id="forecast-description">Sunny</div>
             <div>
-              <span class="max" id="max">15</span> <span>º </span>
-              <span class="min" id="min">12</span> <span>º</span>
+              <span className="max" id="max">15</span> <span>º </span>
+              <span className="min" id="min">12</span> <span>º</span>
             </div>
             </div>
 
 
             <div className="day">
-            <div class="day" id="weekDay">Tus</div>
+            <div className="day" id="weekDay">Tus</div>
             <span id="temperature5Days">15</span><span>ºC</span>
             <div>
               <img
@@ -143,14 +145,14 @@ if (status){
             </div>
             <div id="forecast-description">Sunny</div>
             <div>
-              <span class="max" id="max">15</span> <span>º </span>
-              <span class="min" id="min">12</span> <span>º</span>
+              <span className="max" id="max">15</span> <span>º </span>
+              <span className="min" id="min">12</span> <span>º</span>
             </div>
             </div>
 
 
             <div className="day">
-            <div class="day" id="weekDay">Tus</div>
+            <div className="day" id="weekDay">Tus</div>
             <span id="temperature5Days">15</span><span>ºC</span>
             <div>
               <img
@@ -162,8 +164,8 @@ if (status){
             </div>
             <div id="forecast-description">Sunny</div>
             <div>
-              <span class="max" id="max">15</span> <span>º </span>
-              <span class="min" id="min">12</span> <span>º</span>
+              <span className="max" id="max">15</span> <span>º </span>
+              <span className="min" id="min">12</span> <span>º</span>
             </div>
             </div> 
       </div>
