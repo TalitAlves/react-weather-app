@@ -3,7 +3,6 @@
  display: flex;
  flex-direction: column;
  align-items: center;
- 
 
 }
 
@@ -12,6 +11,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+ 
   
 
 }
@@ -19,7 +19,7 @@
 .heading{
   color: white;
   padding: 10px;
-  width: 50%;
+  width: 600px;
   background-color: #0e185f;
   border-radius: 5px;
 
@@ -69,12 +69,13 @@ div.tittle {
 
 
 .main-weather {
-  background-color: rgba(255, 255, 255, 0.989);
+  background-color: rgba(218, 218, 218, 0.573);
   padding: 15px;
   align-items: center;
   border-radius: 5px;
   align-content: center;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  max-width: 1200px;
 
 
 }
@@ -84,7 +85,7 @@ div.tittle {
 div.box-city-name{
   display: flex;
   flex-grow: 1 ;
-  font-size: 35px;
+  font-size: 45px;
   transition: all ease-in-out;
   font-weight: 700;
   color: #0e185f;
@@ -106,6 +107,7 @@ div.box-city-name{
 .box-actual-weather {
   display: flex;
   flex-direction: column;
+
      
 }
 
@@ -118,15 +120,16 @@ div.box-city-name{
 }
 
 #icon{
-  width: 150px;
+  width: 100px;
   margin: 0;
 }
 
 .main-icon {
-  font-size: 50px;
+  font-size: 45px;
   display: flex;
-  flex-direction: column;  
+  flex-direction: row;  
   align-items: center;
+  padding: 0;
 }
 
 .box-weather-details{
@@ -134,14 +137,18 @@ div.box-city-name{
   flex-direction: column;
   flex-grow: 1;
   align-items: center;
+  font-size: 16px;
+  color:#70757A;
 }
 
 
 .weather{
   display: flex;
   margin-bottom: 15px;
-  font-size: 25px;
+  font-size: 40px;
   align-items: center;
+  flex-grow: 1;
+  justify-content: center;
 }
 
 #description::first-letter,
@@ -152,7 +159,7 @@ div.box-city-name{
 
 
 .image img{
-  width: 371px;
+  width: 260px;
  }
 
 .info{
