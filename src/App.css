@@ -1,53 +1,62 @@
 
 .container{
- display: flex;
  flex-direction: column;
  align-items: center;
-
+ justify-content: center;
+ display: flex;
+ margin: auto 0;
+ 
 }
 
 .container-forecast{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
- 
-  
+  justify-content: center; 
 
 }
 
 .heading{
   color: white;
-  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   width: 600px;
-  background-color: #0e185f;
-  border-radius: 5px;
-
+  
 }
 
-div.tittle {
- margin-bottom: 10px;
+.tittle {
+ margin-bottom: 5px;
  display: flex;
  justify-content: center;
  font-size: 25px;
+ background-color: #0e185f;
+ align-items: center;
+ padding:10px 135px;
+ border-radius: 5px;
+ }
 
-}
 
 
-
-.form-seach-city {
+.form-search-city {
   font-size: 18px;
   display: flex;
   gap: 9px;
   justify-content: center;
+  display: flex;
+  background-color: #0e185f;
+  align-items: center;
+  padding:10px 105px;
+  border-radius: 5px;
  
  
 }
 
-.form-seach-city input {
-  padding: 5px;
+.form-search-city input {
+  padding: 10px;
   border-radius: 5px;
-  padding: 10px; 
+  
   
 
 }
@@ -75,9 +84,9 @@ div.tittle {
   border-radius: 5px;
   align-content: center;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  max-width: 1200px;
   display: flex;
   flex-direction: column  ;
+  
 }
 
 
@@ -184,7 +193,7 @@ div.box-city-name{
 .forecast {
   text-align: center;
   margin-top: 5px;
-  font-size: 14px;  
+  font-size: 15px;  
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -198,6 +207,10 @@ div.box-city-name{
   text-decoration: underline;
   font-weight: bold;
 }
+
+.forecast-icon img{
+  width:  70px;
+ }
 .min {
   color: grey;
 }

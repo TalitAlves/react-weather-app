@@ -1,9 +1,8 @@
-import React from 'react';
+import React  from 'react';
 import axios from "axios";
 import { useState } from "react";
 import FormattedDate from "./FormattedDate"
 import TemperatureUnits from './TemperatureUnits';
-import WeatherIcon from "./WeatherIcon"
 import Forecast5Days from './Forecast5Days';
 
 export default function MainForecast (props){
@@ -11,15 +10,18 @@ const[status, setStatus]= useState(false);
 const[weatherData, setWeatherData]= useState("");
 const [city, setCity] = useState (props.defaultCity);
 
+
 function search(){
-  const apiKey = "8b91fc8da1e02bf608ec0e58160cf792";
-  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
+  const apiKey = "40430ba55fc1o6890ct12a8363f6d64d";
+  let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&unit=metrics`
   axios.get(apiURL).then(handleResponse);
+
 }
 
     function handleForm(event, props){
        event.preventDefault() ;
        search()
+
     }
 
     function handleCityName(event){
@@ -27,30 +29,33 @@ function search(){
     }
 
 function handleResponse(response){
-    console.log(response);
     setWeatherData({
-        temperature: Math.round(response.data.main.temp),
-        city: response.data.name,
-        weather: response.data.weather[0].main,
-        humidity: response.data.main.humidity,
+        coordinates: response.data.coordinates,
+        temperature: Math.round(response.data.temperature.current),
+        city: response.data.city,
+        weather: response.data.condition.description,
+        humidity: response.data.temperature.humidity,
         wind: response.data.wind.speed,
-        feelsLike: response.data.main.feels_like,
-        icon:response.data.weather[0].icon,
-        date: new Date(response.data.dt*1000),
+        feelsLike: response.data.temperature.feels_like,
+        icon:response.data.condition.icon_url,
+        date: new Date(response.data.time*1000),
 
     })
     setStatus(true)
+    console.log(response)
+    
 }
 
 if (status){
     return(
 
       <div className="container">
-        <div className=" heading tittle">
-      Weather Around The World
+      <div className="heading">
+        <div className="tittle">
+        Weather Around The World
         </div>
           
-        <form className="heading form-seach-city" onSubmit={handleForm}>
+        <form className="form-search-city" onSubmit={handleForm}>
             <input
               type="text"
               id="form-city"
@@ -59,50 +64,39 @@ if (status){
               onChange={handleCityName}
             />
             <button className="btn btn-primary" type="submit">Search</button>
-            <button className="btn btn-primary" id="currentLocation" type="submit">Your location</button>
-        </form>
-      
+            </form>
+        </div>
             
-        <div className="container-forecast">
-        <div className="main-weather">
+      <div className="container-forecast">
+          <div className="main-weather">
                <div className="box-city-name">
                  {weatherData.city}
                </div>
         
             <div className="box-date">
                  <FormattedDate date={weatherData.date}/>
-            </div>
-        
-        
+            </div>     
 
         <div className="main-icon">
-            <WeatherIcon icon={weatherData.icon}/>
+           <img src={weatherData.icon} alt="" />
            <TemperatureUnits temp={weatherData.temperature} unitA={"C"} unitB={"F"}/>
         </div>
-
-
          <div id="description">{weatherData.weather}</div>
        
-
        <div className=" box-weather-details">
          <div>Real Feel: {Math.round(weatherData.feelsLike)}ºC</div>
          <div>Humidity: {weatherData.humidity}%</div>
          <div>Wind:{Math.round(weatherData.wind)}km/h </div>
-       </div>
-     
-     
-     
+       </div>    
      </div>
      
-    
-     
+         
      <div className=" main-weather five-days-forecast">
-     <Forecast5Days />
-     </div>
+     <Forecast5Days coordinates={weatherData.coordinates} />
       
-      
+     </div>     
       </div>
-      </div>
+   </div>
 
 
 

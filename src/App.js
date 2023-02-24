@@ -7,7 +7,7 @@ import MainForecast from './MainForecast';
 function App() {
   return (
     <div className="App">
-     <MainForecast defaultCity="PAris"/>
+     <MainForecast defaultCity="Paris"/>
      <Footer></Footer>
    
        </div>
